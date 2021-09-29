@@ -1,0 +1,112 @@
+/* reset.css */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 导航栏 */
+
+.navBox {
+  height: 80px;
+  background: #08a5e0;
+}
+
+.navBox nav {
+  float: right;
+}
+
+.navBox nav ul {
+  height: 80px;
+}
+
+.navBox nav ul li {
+  float: left;
+  line-height: 80px;
+  margin: 0 10px;
+}
+
+/* Banner */
+
+.bannerBox img {
+  width: 100%;
+}
+
+/* news */
+.newsBox {
+  margin: 0 auto;
+  width: 980px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.newsBox .listBox .title {
+  font-weight: bold;
+  line-height: 30px;
+}
+.newsBox .listBox .content {
+  line-height: 28px;
+}
+
+.newsBox .listBox .content li {
+  font-size: 14px;
+}
+
+/* Recent topics */
+
+.topicBox {
+  margin: 0 auto;
+  width: 980px;
+  margin-top: 16px;
+}
+
+.topicBox-content {
+  margin-top: 14px;
+}
+
+.topicBox .wrapperBox {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 30px;
+}
+
+.topicBox .wrapperBox .topicBox-content .des {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* more */
+
+.moreBox {
+  height: 60px;
+  background-color: #e1f2f9;
+  line-height: 60px;
+  text-align: center;
+  margin-top: 44px;
+}
+.moreBox span {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* copyright */
+
+.copyrightBox {
+  height: 70px;
+  background-color: #08a5e0;
+  line-height: 70px;
+  text-align: center;
+}

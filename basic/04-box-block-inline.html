@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>04-box-block-inline</title>
+  <style>
+    .box1 {
+      /* width: 100px; */
+      height: 100px;
+      background: pink;
+    }
+
+    .box2 {
+      /* width: 100px;
+      height: 100px; */
+      background: skyblue;
+    }
+
+    .inline1 {
+      /* width: 200px; */
+      /* height: 200px; */
+      background: pink;
+    }
+
+    .inline2 {
+      /* margin: 10px 10px 10px 10px;
+      padding: 20px; */
+      background: yellow;
+    }
+
+    .inline-box {
+      font-size: 0;
+    }
+
+    .inline1,
+    .inline2 {
+      box-sizing: border-box;
+      font-size: 16px;
+      border: 10px solid salmon;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2">块级盒子2</div>
+  <p>空隙：</p>
+  <span class="inline1">内联盒子1</span>
+  <span class="inline2">内联盒子2</span>
+  <p>不换行处理：</p>
+  <span class="inline1">内联盒子1</span><span class="inline2">内联盒子2</span>
+  <p>加个 div box，让这个 box 的 font-size 为 0，子元素 span 则设置为你想要的 16 px：</p>
+  <div class="inline-box">
+    <span class="inline1">内联盒子1</span>
+    <span class="inline2">内联盒子2</span>
+  </div>
+
+
+
+
+
+
+
+
+  <script></script>
+</body>
+
+</html>

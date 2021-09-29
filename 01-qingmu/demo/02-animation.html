@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 40px;
+      text-decoration: none;
+      position: relative;
+      color: #333;
+      margin: 200px;
+    }
+
+    .btn1 {
+      padding: 10px 28px;
+    }
+
+    .btn1 .btnbg-x {
+      position: absolute;
+      left: 50%;
+      width: 0;
+      top: 0;
+      bottom: 0;
+      /*此处填写代码*/
+      border-top: 1px solid #136EAC;
+      border-bottom: 1px solid #136EAC;
+      transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+
+    .btn1:hover {
+      color: #136EAC;
+    }
+
+    .btn1:hover .btnbg-x {
+      width: 100%;
+      left: 0;
+      border-color: #136EAC;
+    }
+
+    .btn1 .btn-inner {
+      padding: 0 12px;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="#" class="btn btn1">
+    <span class="btn-inner">查看更多</span>
+    <div class="btnbg-x"></div>
+  </a>
+</body>
+
+</html>
