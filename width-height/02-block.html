@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>02-block</title>
+  <style>
+    body {
+      padding-top: 100px;
+      padding-bottom: 300px;
+    }
+
+    .box1 {
+      width: 100px;
+      background-color: sandybrown;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">dadad <p>我是 p 元素</p>
+  </div>
+
+  <style>
+    .box2 {
+      width: 200px;
+      height: 100px;
+      background-color: skyblue;
+    }
+
+    .box3 {
+      width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 10px solid sandybrown;
+      margin: 30px;
+      background-color: skyblue;
+    }
+  </style>
+  <div class="box2"></div>
+  <div class="box3"></div>
+
+  <style>
+    .inline {
+      width: 10px;
+      height: 0px;
+      background-color: salmon;
+      margin: 30px;
+    }
+
+    .inline1 {
+      background-color: gold;
+    }
+  </style>
+  <div>测试内联元素是否影响我，只要我不动就不会影响我</div>
+  <span class="inline">我是一个内联元素</span>
+  <span class="inline1">我是内联元素参照物</span>
+  <div>测试内联元素是否影响我，只要我不动就不会影响我</div>
+
+  <br>
+
+  <style>
+    .inline2 {
+      width: 100px;
+      height: 100px;
+      background-color: salmon;
+      padding: 50px;
+      margin: 30px;
+      display: inline-block;
+    }
+
+    .inline3 {
+      background-color: gold;
+    }
+  </style>
+  <div>测试 inline-block 元素是否影响我，只要我不动就不会影响我</div>
+  <span class="inline2">我是 inline-block</span>
+  <em class="inline3">我是 em 元素</em>
+  <div>测试 inline-block 元素是否影响我，只要我不动就不会影响我</div>
+  <script></script>
+</body>
+
+</html>

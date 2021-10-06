@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>14-BFC2</title>
+  <style>
+    .box1 {
+      width: 200px;
+      height: 200px;
+      background: pink;
+      overflow: hidden;
+      /* 触发了BFC，形成独立盒子 */
+    }
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background: skyblue;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">
+    <div class="box2"></div>
+  </div>
+  <script></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>14-BFC</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .floatDiv {
+      width: 100px;
+      height: 100px;
+      background-color: skyblue;
+      float: left;
+    }
+
+    .normalDiv {
+      /* width: 200px; */
+      height: 200px;
+      background-color: salmon;
+      overflow: hidden;
+    }
+
+    /* .normalDiv1 {
+      width: 100px;
+      height: 100px;
+      background-color: sandybrown;
+      position: absolute;
+      top: 100px;
+    } */
+
+    .box {
+      width: 100px;
+      height: 100px;
+      overflow: hidden;
+      /* 触发了BFC，形成独立盒子 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="floatDiv"></div>
+  <div class="normalDiv">Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello
+    world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello
+    world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello
+    world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello
+    world！Hello world！Hello world！Hello world！Hello world！Hello world！Hello world！</div>
+  <!-- <div class="normalDiv1"></div> -->
+  <script></script>
+</body>
+
+</html>

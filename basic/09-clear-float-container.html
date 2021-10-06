@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>09-clear-float-container</title>
+  <style>
+    .box1 {
+      width: 200px;
+      border: 1px black solid;
+    }
+
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      float: left;
+    }
+    .box3 {
+      width: 200px;
+      height: 200px;
+      background: skyblue;
+    }
+    .box1::after {
+      content: '';
+      clear: both;
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">
+    <div class="box2"></div>
+  </div>
+  <div class="box3">aaaaaa</div>
+  <script></script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>01</title>
+  <style></style>
+</head>
+
+<body>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+    /* img {
+      vertical-align: top;
+    } */
+
+    p {
+      border-bottom: 2px solid black;
+      padding-bottom: 4px;
+    }
+    .demo {
+      margin: 20px 0;
+    }
+    .father {
+      border: 1px solid salmon;
+      width: 400px;
+      padding: 4px;
+    }
+
+    .child {
+      background-color: gold;
+      color: black;
+      display: inline-block;
+      position: relative;
+    }
+
+    .eg1 { width: auto; } 
+    .eg2 { width: auto; } 
+    .eg3 { width: auto; } 
+    .eg4 { width: auto; }
+
+    .minwidth {
+      width: 3px;
+    }
+    .out {
+      white-space: nowrap;
+    }
+  </style>
+  <h1>width:auto 作用于 inline-block 元素，还有它是 position 为 relative 的</h1>
+  <button id="prev"><a href="javascript:history.go(-1)">上一页</a></button>
+  <button id="next"><a href="#">下一页</a></button>
+  <p>展示区：</p>
+  <div class="demo">
+    <div class="father">
+      <div class="child eg1"></div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="father">
+      <div class="child eg2">
+        <span>eg2：字数不超父容器</span>
+      </div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="father">
+      <div class="child eg3">
+        <span>eg3：字数超过父容器一个字一个字一个字一个字一个字一个字一个字一个字一个字一个字一个字一个字</span>
+      </div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="father">
+      <div class="child eg3">
+        <span>adadadadasdadadadabbbadadadadadaduidoadadadawwewerqqqdqd</span>
+      </div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="father minwidth">
+      <div class="child eg4">太小了</div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="father minwidth">
+      <div class="child eg4 out">太小了，但我设置了 white-space:nowrap</div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="father minwidth">
+      <div class="child eg4">it is too small</div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="father minwidth">
+      <div class="child eg4 out">it is too small,but I have set white-space:nowrap</div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="father minwidth">
+      <div class="child eg4 out">
+        <img src="https://oktools.net/ph/60x30?t=60×30" alt="图片">
+      </div>
+    </div>
+  </div>
+  <p>代码区：</p>
+  <script>
+    const nextPages = document.querySelector('#next a')
+    const urlStr = window.location.href
+    const fileName = urlStr.match(/([^\/.]+)$|([^\/]+)(\.[^\/.]+)$/)[2]
+    nextPages.href = `./${Number(fileName) + 1}.html`
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>06-border-box</title>
+  <style>
+    body {
+      border: 20px solid salmon;
+    }
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background: pink;
+      padding: 10px;
+      border: 5px black solid;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+    input {
+      /* width: 100%; */
+      width: calc(100% - 63px);
+      padding: 30px;
+      /* box-sizing: border-box; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">一个盒子</div>
+  <input type="text">
+  <script></script>
+</body>
+
+</html>
