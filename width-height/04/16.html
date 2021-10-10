@@ -9,7 +9,7 @@
 
 <body>
 
-  <h1>line box 高度的计算</h1>
+  <h1>line box 和 line box</h1>
   <button id="prev"><a href="javascript:history.go(-1)">上一页</a></button>
   <button id="next"><a href="#">下一页</a></button>
   <p>展示区：</p>
@@ -24,49 +24,53 @@
       padding-bottom: 4px;
       margin-top: 30px;
     }
+
+    .demo {
+      margin-bottom: 200px;
+    }
   </style>
   <style>
     .father {
       border: 1px solid salmon;
-      font-size: 16px;
-      line-height: 150px;
-      font-family: '宋体';
-    }
-    .child {
-      background-color: gold;
+      width: 400px;
+      height: 100px;
       color: black;
-      font-size: 100px;
-      /* vertical-align: bottom; */
     }
 
-    .eg1 {
-      font-family: '宋体';
+    .first {
+      background-color: lightgreen;
+      margin-bottom: 40px;
+    }
+    .second {
+      background-color: gold;
+      width: 200px;
+      height: 40px;
+    }
+    .third {
+      background-color: lightpink;
+      margin-top: 40px;
+      line-height: 28px;
     }
 
-    .eg2 {
-      font-family: '微软雅黑';
+    .float {
+      float: left;
     }
-
-    .eg3 {
-      font-family: 'Catamaran';
-    }
-   
   </style>
   <div class="demo">
     <div class="father">
-      <span class="child eg1">Xx</span>
-      <span class="child eg2">Xx</span>
-      <img src="https://via.placeholder.com/200x100/ffd700/000000" alt="200*100">
+      <span class="first">第一个 div</span>
+      <div class="second">第二个 div，no float</div>
+      <span class="third">第三个 div，我们合并了，都在一行</span>
     </div>
   </div>
   <div class="demo">
     <div class="father">
-      <span class="child eg1">宋体</span>
-      <span class="child eg2">微软雅黑</span>
-      <span class="child eg3">Catamaran</span>
+      <span class="first">第一个 div</span>
+      <div class="second float">第二个 div，float</div>
+      <span class="third">第三个 div，我们合并了，都在一个 line box 里，惊不惊喜？意不意外？</span>
     </div>
   </div>
-  <p>代码区：</p>
+  
   <script>
     const nextPages = document.querySelector('#next a')
     const urlStr = window.location.href

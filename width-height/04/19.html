@@ -9,7 +9,7 @@
 
 <body>
 
-  <h1>line box 高度的计算</h1>
+  <h1>BFC 解决 margin 重叠问题</h1>
   <button id="prev"><a href="javascript:history.go(-1)">上一页</a></button>
   <button id="next"><a href="#">下一页</a></button>
   <p>展示区：</p>
@@ -24,49 +24,54 @@
       padding-bottom: 4px;
       margin-top: 30px;
     }
+
+    .demo {
+      margin-bottom: 50px;
+    }
   </style>
   <style>
     .father {
       border: 1px solid salmon;
-      font-size: 16px;
-      line-height: 150px;
-      font-family: '宋体';
-    }
-    .child {
-      background-color: gold;
+      width: 400px;
       color: black;
-      font-size: 100px;
-      /* vertical-align: bottom; */
     }
 
-    .eg1 {
-      font-family: '宋体';
+    .gold {
+      height: 100px;
+      margin-top: 10px;
+      background-color: gold;
     }
 
-    .eg2 {
-      font-family: '微软雅黑';
+    .skyblue {
+      margin: 20px 0;
+      width: 200px;
+      height: 40px;
+      background-color: skyblue;
     }
 
-    .eg3 {
-      font-family: 'Catamaran';
+    .bfc {
+      overflow: hidden;
     }
-   
   </style>
   <div class="demo">
     <div class="father">
-      <span class="child eg1">Xx</span>
-      <span class="child eg2">Xx</span>
-      <img src="https://via.placeholder.com/200x100/ffd700/000000" alt="200*100">
+      <div class="gold">
+        <div class="skyblue">
+          我和 gold 的 margin 重置了
+        </div>
+      </div>
     </div>
   </div>
   <div class="demo">
     <div class="father">
-      <span class="child eg1">宋体</span>
-      <span class="child eg2">微软雅黑</span>
-      <span class="child eg3">Catamaran</span>
+      <div class="gold bfc">
+        <div class="skyblue">
+          我和 gold 的 margin 没有重置了
+        </div>
+      </div>
     </div>
   </div>
-  <p>代码区：</p>
+
   <script>
     const nextPages = document.querySelector('#next a')
     const urlStr = window.location.href
