@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>15-vertical</title>
+  <style>
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+    }
+
+    body {
+      --color1: hsl(2, 86%, 58%);
+      --color2: hsl(0, 63%, 32%);
+      background: var(--color1);
+      color: var(--color2);
+      text-align: center;
+    }
+
+    .p {
+      background: var(--color2);
+      border: 2px solid white;
+      border-left: 0;
+      border-right: 0;
+      color: #fff;
+      max-width: 540px;
+      margin: 30px auto;
+      display: flex;
+      align-items: center;
+      font-size: 100px;
+    }
+    img {
+      width: 0.75em;
+      height: .75em;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="p">
+    <img src="./icon1.svg" alt=""> 
+    <span class="c">Ba<span>
+  </p>
+  <script></script>
+</body>
+
+</html>
