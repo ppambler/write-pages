@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>01</title>
+  <style></style>
+</head>
+
+<body>
+
+  <h1>内联盒子上下居中</h1>
+  <button id="prev"><a href="javascript:history.go(-1)">上一页</a></button>
+  <button id="next"><a href="#">下一页</a></button>
+  <p>展示区：</p>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    p {
+      border-bottom: 2px solid black;
+      padding-bottom: 4px;
+      margin-top: 30px;
+    }
+
+    .demo {
+      margin: 20px 0;
+    }
+  </style>
+  <style>
+   .box {
+     width: 300px;
+     height: 200px;
+     background-color: skyblue;
+     display: flex;
+     align-items: center;
+   }
+   .box2 {
+     width: 300px;
+     height: 200px;
+     background-color: skyblue;
+     display: flex;
+     flex-wrap: wrap;
+     align-content: center;
+   }
+   .box3 {
+     width: 300px;
+     height: 200px;
+     background-color: skyblue;
+     line-height: 200px;
+   }
+   .box4 {
+     width: 300px;
+     height: 200px;
+     background-color: skyblue;
+     display: table-cell;
+     vertical-align: middle;
+   }
+  </style>
+  <div class="demo">
+    <div class="box">
+      测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+    </div>
+  </div>
+  <div class="demo">
+    <div class="box2">
+      测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+    </div>
+  </div>
+  <!-- <div class="demo">
+    <div class="box3">
+      测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+    </div>
+  </div> -->
+  <div class="demo">
+    <div class="box4">
+      测试文字测试文字测试文字测试文字测试文字测试文字测试文字测试文字
+    </div>
+  </div>
+  <script>
+    const nextPages = document.querySelector('#next a')
+    const urlStr = window.location.href
+    const fileName = urlStr.match(/([^\/.]+)$|([^\/]+)(\.[^\/.]+)$/)[2]
+    nextPages.href = `./${Number(fileName) + 1}.html`
+  </script>
+</body>
+
+</html>

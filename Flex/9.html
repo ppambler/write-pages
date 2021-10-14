@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>01</title>
+  <style></style>
+</head>
+
+<body>
+
+  <h1>不定项居中布局</h1>
+  <button id="prev"><a href="javascript:history.go(-1)">上一页</a></button>
+  <button id="next"><a href="#">下一页</a></button>
+  <p>展示区：</p>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    p {
+      border-bottom: 2px solid black;
+      padding-bottom: 4px;
+      margin-top: 30px;
+    }
+
+    .demo {
+      margin: 20px 0;
+    }
+  </style>
+  <style>
+    .box {
+      width: 300px;
+      height: 150px;
+      background-color: skyblue;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    .box div {
+      width: 30px;
+      height: 30px;
+      background-color: pink;
+      border-radius: 50%;
+      margin: 10px;
+    }
+
+    .box2 {
+      width: 300px;
+      height: 150px;
+      background-color: skyblue;
+    }
+
+    .box2 section {
+      width: 150px;
+      /* width: 100%; */
+      /* text-align: center; */
+      margin: auto;
+      overflow: hidden;
+      transform: translateY(100px);
+    }
+
+    .box2 div {
+      width: 30px;
+      height: 30px;
+      background-color: pink;
+      border-radius: 50%;
+      float: left;
+      margin: 10px;
+    }
+
+    .box3 {
+      width: 300px;
+      height: 150px;
+      background-color: skyblue;
+      position: relative;
+    }
+
+    .box3 section {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      font-size: 0;
+    }
+
+    .box3 div {
+      width: 30px;
+      height: 30px;
+      background-color: pink;
+      border-radius: 50%;
+      display: inline-block;
+      font-size: 16px;
+      margin: 10px;
+    }
+  </style>
+  <div class="demo">
+    <div class="box">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="box2">
+      <section>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="box3">
+      <section>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </section>
+    </div>
+  </div>
+  <p>代码区：</p>
+  <script>
+    const nextPages = document.querySelector('#next a')
+    const urlStr = window.location.href
+    const fileName = urlStr.match(/([^\/.]+)$|([^\/]+)(\.[^\/.]+)$/)[2]
+    nextPages.href = `./${Number(fileName) + 1}.html`
+  </script>
+</body>
+
+</html>

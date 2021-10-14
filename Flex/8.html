@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>01</title>
+  <style></style>
+</head>
+
+<body>
+
+  <h1>块级盒子上下左右居中</h1>
+  <button id="prev"><a href="javascript:history.go(-1)">上一页</a></button>
+  <button id="next"><a href="#">下一页</a></button>
+  <p>展示区：</p>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    p {
+      border-bottom: 2px solid black;
+      padding-bottom: 4px;
+      margin-top: 30px;
+    }
+
+    .demo {
+      margin: 20px 0;
+    }
+  </style>
+  <style>
+    .box {
+      width: 300px;
+      height: 200px;
+      background-color: skyblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .box div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+
+    .box2 {
+      width: 300px;
+      height: 200px;
+      background-color: skyblue;
+      position: relative;
+    }
+
+    .box2 div {
+      width: 200px;
+      height: 50px;
+      background-color: pink;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -25px -100px;
+    }
+
+    .box3 {
+      width: 300px;
+      height: 200px;
+      background-color: skyblue;
+      position: relative;
+    }
+
+    .box3 div {
+      width: 200px;
+      height: 50px;
+      background-color: pink;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box4 {
+      width: 300px;
+      height: 200px;
+      background-color: skyblue;
+      display: flex;
+    }
+
+    .box4 div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      margin: auto;
+    }
+
+    .box5 {
+      width: 300px;
+      height: 200px;
+      background-color: skyblue;
+      position: relative;
+    }
+
+    .box5 div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+    }
+  </style>
+  <div class="demo">
+    <div class="box">
+      <div></div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="box2">
+      <div></div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="box3">
+      <div></div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="box4">
+      <div></div>
+    </div>
+  </div>
+  <div class="demo">
+    <div class="box5">
+      <div></div>
+    </div>
+  </div>
+  <script>
+    const nextPages = document.querySelector('#next a')
+    const urlStr = window.location.href
+    const fileName = urlStr.match(/([^\/.]+)$|([^\/]+)(\.[^\/.]+)$/)[2]
+    nextPages.href = `./${Number(fileName) + 1}.html`
+  </script>
+</body>
+
+</html>
