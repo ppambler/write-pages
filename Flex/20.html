@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>01</title>
+  <style></style>
+</head>
+
+<body>
+
+  <h1>等高布局</h1>
+  <button id="prev"><a href="javascript:history.go(-1)">上一页</a></button>
+  <button id="next"><a href="#">下一页</a></button>
+  <p>展示区：</p>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    body>p {
+      border-bottom: 2px solid black;
+      padding-bottom: 4px;
+      margin-top: 30px;
+    }
+
+    .demo {
+      display: inline-block;
+      /* vertical-align: middle; */
+      margin: 200px 50px;
+    }
+  </style>
+  <style>
+    .main {
+      width: 500px;
+      background-color: skyblue;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .main div {
+      width: 100px;
+      background-color: pink;
+    }
+  </style>
+  <div class="demo">
+    <div class="main">
+      <div>
+        <p>测试内容</p>
+        <p>测试内容</p>
+        <p>测试内容</p>
+        <p>测试内容</p>
+      </div>
+      <div>
+        <p>测试内容</p>
+      </div>
+    </div>
+  </div>
+  <style>
+    .main2 {
+      width: 500px;
+      background-color: skyblue;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .main2 div {
+      width: 100px;
+      background-color: pink;
+    }
+  </style>
+  <div class="demo">
+    <div class="main2">
+      <div>
+        <p>测试内容</p>
+        <p>测试内容</p>
+        <p>测试内容</p>
+        <p>测试内容</p>
+      </div>
+      <div>
+        <p>测试内容</p>
+        <p>测试内容</p>
+        <p>测试内容</p>
+        <p>测试内容</p>
+        <p>测试内容</p>
+        <p>测试内容</p>
+        <p>测试内容</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .main3 {
+      width: 500px;
+      background: skyblue;
+      overflow: hidden;
+    }
+
+    .main3 div {
+      width: 100px;
+      background: pink;
+      float: left;
+      margin-bottom: -2000px;
+      padding-bottom: 2000px;
+    }
+    .main3 div:nth-of-type(2) {
+      float: right;
+    }
+  </style>
+  <div class="main3">
+    <div>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+    </div>
+    <div>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+      <p>测试内容</p>
+    </div>
+  </div>
+
+  <script>
+    const nextPages = document.querySelector('#next a')
+    const urlStr = window.location.href
+    const fileName = urlStr.match(/([^\/.]+)$|([^\/]+)(\.[^\/.]+)$/)[2]
+    nextPages.href = `./${Number(fileName) + 1}.html`
+  </script>
+</body>
+
+</html>

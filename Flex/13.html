@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>01</title>
+  <style></style>
+</head>
+
+<body>
+
+  <h1>flex-grow</h1>
+  <button id="prev"><a href="javascript:history.go(-1)">上一页</a></button>
+  <button id="next"><a href="#">下一页</a></button>
+  <p>展示区：</p>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    p {
+      border-bottom: 2px solid black;
+      padding-bottom: 4px;
+      margin-top: 30px;
+    }
+
+    .demo {
+      margin: 500px 0;
+    }
+  </style>
+  <style>
+    .main {
+      width: 500px;
+      height: 300px;
+      background: skyblue;
+      display: flex;
+    }
+
+    .main div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      /* flex-grow: 0; */
+      /* flex-grow: 1; */
+      /* flex-grow: 0.5; */
+      flex-grow: 2;
+    }
+  </style>
+  <div class="demo">
+    <div class="main">
+      <div>1</div>
+    </div>
+  </div>
+  <style>
+    .main2 {
+      width: 500px;
+      height: 300px;
+      background: skyblue;
+      display: flex;
+    }
+
+    .main2 div:nth-of-type(1) {
+      width: 200px;
+      height: 100px;
+      background-color: pink;
+      flex-grow: 0.2;
+    }
+
+    .main2 div:nth-of-type(2) {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      flex-grow: 0.1;
+    }
+  </style>
+  <div class="demo">
+    <div class="main2">
+      <div>1</div>
+      <div>2</div>
+    </div>
+  </div>
+  <script>
+    const nextPages = document.querySelector('#next a')
+    const urlStr = window.location.href
+    const fileName = urlStr.match(/([^\/.]+)$|([^\/]+)(\.[^\/.]+)$/)[2]
+    nextPages.href = `./${Number(fileName) + 1}.html`
+  </script>
+</body>
+
+</html>

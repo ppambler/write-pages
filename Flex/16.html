@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <title>01</title>
+  <style></style>
+</head>
+
+<body>
+
+  <h1>flex-basis</h1>
+  <button id="prev"><a href="javascript:history.go(-1)">上一页</a></button>
+  <button id="next"><a href="#">下一页</a></button>
+  <p>展示区：</p>
+  <style>
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    p {
+      border-bottom: 2px solid black;
+      padding-bottom: 4px;
+      margin-top: 30px;
+    }
+
+    .demo {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+  <style>
+    .main {
+      width: 300px;
+      height: 300px;
+      background-color: skyblue;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .main div {
+      background-color: pink;
+      flex-basis: 200px;
+    }
+  </style>
+  <div class="demo">
+    <div class="main">
+      <div>测试文字</div>
+    </div>
+  </div>
+  <style>
+    .main1 {
+      width: 300px;
+      height: 300px;
+      background-color: skyblue;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .main1 div {
+      background-color: pink;
+      flex-basis: auto;
+    }
+  </style>
+  <div class="demo">
+    <div class="main1">
+      <div>测试文字</div>
+    </div>
+  </div>
+  <style>
+    .main2 {
+      width: 300px;
+      height: 300px;
+      background-color: skyblue;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .main2 div {
+      background-color: pink;
+      flex-basis: 0;
+    }
+  </style>
+  <div class="demo">
+    <div class="main2">
+      <div>测试文字</div>
+    </div>
+  </div>
+  <style>
+    .main3 {
+      width: 300px;
+      height: 300px;
+      background-color: skyblue;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .main3 div {
+      background-color: pink;
+      flex-basis: 100%;
+    }
+  </style>
+  <div class="demo">
+    <div class="main3">
+      <div>测试文字</div>
+    </div>
+  </div>
+
+  <script>
+    const nextPages = document.querySelector('#next a')
+    const urlStr = window.location.href
+    const fileName = urlStr.match(/([^\/.]+)$|([^\/]+)(\.[^\/.]+)$/)[2]
+    nextPages.href = `./${Number(fileName) + 1}.html`
+  </script>
+</body>
+
+</html>
